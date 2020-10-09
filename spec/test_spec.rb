@@ -17,7 +17,7 @@ describe Enumerable do
   end
 
   it 'select block' do
-    expect(%w[Sharon Leo Leila Brian Arun].my_select { |friend| friend != 'Brian' } == %w[Sharon Leo Leila Brian Arun].select { |friend| friend != 'Brian' } ).to be true
+    expect(%w[Sharon Leo Leila Brian Arun].my_select { |friend| friend != 'Brian' } == %w[Sharon Leo Leila Brian Arun].reject { |friend| friend == 'Brian' }).to be true
   end
 
   it 'all block' do
