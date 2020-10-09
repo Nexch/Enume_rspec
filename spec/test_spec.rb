@@ -5,7 +5,6 @@ describe Enumerable do
   include Enumerable
 
   describe 'my_each' do
-
     it 'each string and block' do
       expect(%w[Sharon Leo Leila Brian Arun].my_each { |friend| puts friend } == %w[Sharon Leo Leila Brian Arun].each { |friend| puts friend }).to be true
     end
@@ -17,7 +16,6 @@ describe Enumerable do
     it 'each index' do
       expect(%w[Sharon Leo Leila Brian Arun].my_each_with_index { |friend, index| print "#{friend} #{index} \n" } == %w[Sharon Leo Leila Brian Arun].each_with_index { |friend, index| print "#{friend} #{index} \n" }).to be true
     end
-
   end
 
   describe 'my_select' do
@@ -31,7 +29,6 @@ describe Enumerable do
   end
 
   describe 'my_all' do
-
     it 'all block' do
       expect(%w[Sharon Leo Leila Brian Arun].my_all? { |word| word.length >= 3 } == %w[Sharon Leo Leila Brian Arun].all? { |word| word.length >= 3 }).to be true
     end
@@ -90,7 +87,6 @@ describe Enumerable do
   end
 
   describe 'my_any' do
-
     it 'any no block' do
       expect([1, 2, 3].my_any?).to be true
     end
@@ -117,7 +113,6 @@ describe Enumerable do
   end
 
   describe 'my_none' do
-
     it 'none no block' do
       expect([1, 2, 3].my_none?).to be true
     end
@@ -140,7 +135,6 @@ describe Enumerable do
   end
 
   describe 'my_count' do
-
     it 'count no block' do
       expect([1, 2, 3].my_count).to be 3
     end
@@ -155,7 +149,6 @@ describe Enumerable do
   end
 
   describe 'my_inject' do
-
     it 'inject' do
       expect([1, 2, 3, 4, 5, 6, 7, 8, 9].my_inject { |sum, n| sum + n } == [1, 2, 3, 4, 5, 6, 7, 8, 9].inject { |sum, n| sum + n }).to be true
     end
@@ -174,7 +167,6 @@ describe Enumerable do
   end
 
   describe 'my_map' do
-
     it 'map' do
       expect([1, 2, 3].map { |i| i * i } == [1, 2, 3].my_map { |i| i * i }).to be true
     end
