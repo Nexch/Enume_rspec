@@ -20,7 +20,10 @@ At the same time we added #muptiply_els which multiplies all the elements of the
 
 - Ruby
 
-## Live Demo
+## How to test the cases
+For testing you will need to have a copy of RSpec installed in your machine
+after that you will only need to run rspec in the root folder
+if you have any problem please contact me in my twitter link below
 
 [Live Demo](https://repl.it/@janisjenny/Enumerable-Methods-1#main.rb)
 
